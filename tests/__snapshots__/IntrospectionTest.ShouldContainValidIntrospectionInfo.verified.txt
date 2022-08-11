@@ -1,0 +1,97 @@
+﻿{
+  Modules: [
+    {
+      Id: {
+        ModuleType: IntrospectionTest.ModuleC
+      },
+      DisplayName: CustomTitle,
+      Properties: {
+        Objects: []
+      }
+    },
+    {
+      Id: {
+        ModuleType: IntrospectionTest.ModuleB
+      },
+      DisplayName: ModuleB,
+      Properties: {
+        Objects: []
+      },
+      Dependencies: [
+        {
+          Id: {
+            ModuleType: IntrospectionTest.ModuleC
+          },
+          DisplayName: CustomTitle,
+          Properties: {
+            Objects: []
+          }
+        }
+      ]
+    },
+    {
+      Id: {
+        ModuleType: IntrospectionTest.ModuleA
+      },
+      DisplayName: ModuleA,
+      Properties: {
+        Objects: []
+      },
+      Dependencies: [
+        {
+          Id: {
+            ModuleType: IntrospectionTest.ModuleB
+          },
+          DisplayName: ModuleB,
+          Properties: {
+            Objects: []
+          },
+          Dependencies: [
+            {
+              Id: {
+                ModuleType: IntrospectionTest.ModuleC
+              },
+              DisplayName: CustomTitle,
+              Properties: {
+                Objects: []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  ExplicitModules: [
+    {
+      Id: {
+        ModuleType: IntrospectionTest.ModuleA
+      },
+      DisplayName: ModuleA,
+      Properties: {
+        Objects: []
+      },
+      Dependencies: [
+        {
+          Id: {
+            ModuleType: IntrospectionTest.ModuleB
+          },
+          DisplayName: ModuleB,
+          Properties: {
+            Objects: []
+          },
+          Dependencies: [
+            {
+              Id: {
+                ModuleType: IntrospectionTest.ModuleC
+              },
+              DisplayName: CustomTitle,
+              Properties: {
+                Objects: []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
