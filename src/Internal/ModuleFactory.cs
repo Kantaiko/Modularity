@@ -1,4 +1,5 @@
 ﻿using Kantaiko.Modularity.Exceptions;
+using Kantaiko.Modularity.Resources;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
@@ -22,9 +23,9 @@ internal class ModuleFactory
         switch (constructors.Length)
         {
             case 0:
-                throw new ModuleConstructionException(type, "Module must contain accessible constructor");
+                throw new ModuleConstructionException(type, Strings.ModuleMustContainAccessibleConstructor);
             case > 1:
-                throw new ModuleConstructionException(type, "Module cannot contain multiple constructors");
+                throw new ModuleConstructionException(type, Strings.ModuleCannotContainMultipleConstructors);
         }
 
         var constructor = constructors[0];
@@ -44,8 +45,7 @@ internal class ModuleFactory
                 continue;
             }
 
-            throw new ModuleConstructionException(type,
-                $"Unable to provide {parameterInfo.ParameterType.Name} to module constructor");
+            throw new ModuleConstructionException(type, Strings.InvalidModuleParameter);
         }
 
         return (IModule) constructor.Invoke(constructorParameters.ToArray());

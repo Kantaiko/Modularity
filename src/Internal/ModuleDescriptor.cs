@@ -1,3 +1,5 @@
+using Kantaiko.Modularity.Metadata;
+
 namespace Kantaiko.Modularity.Internal;
 
 internal class ModuleDescriptor

@@ -1,0 +1,57 @@
+Kantaiko.Modularity.Exceptions.ModuleConstructionException
+Kantaiko.Modularity.IModule
+Kantaiko.Modularity.IModule.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection! services, Kantaiko.Modularity.Metadata.ModuleMetadata! metadata) -> void
+Kantaiko.Modularity.IModule.GetMetadata() -> Kantaiko.Modularity.Metadata.ModuleMetadata!
+Kantaiko.Modularity.Introspection.HostInfo
+Kantaiko.Modularity.Introspection.HostInfo.Assemblies.get -> System.Collections.Generic.IReadOnlySet<System.Reflection.Assembly!>!
+Kantaiko.Modularity.Introspection.HostInfo.ExplicitModules.get -> System.Collections.Generic.IReadOnlyList<Kantaiko.Modularity.Introspection.ModuleInfo!>!
+Kantaiko.Modularity.Introspection.HostInfo.Modules.get -> System.Collections.Generic.IReadOnlyList<Kantaiko.Modularity.Introspection.ModuleInfo!>!
+Kantaiko.Modularity.Introspection.ModuleFlags
+Kantaiko.Modularity.Introspection.ModuleFlags.Hidden = 2 -> Kantaiko.Modularity.Introspection.ModuleFlags
+Kantaiko.Modularity.Introspection.ModuleFlags.Library = 1 -> Kantaiko.Modularity.Introspection.ModuleFlags
+Kantaiko.Modularity.Introspection.ModuleFlags.None = 0 -> Kantaiko.Modularity.Introspection.ModuleFlags
+Kantaiko.Modularity.Introspection.ModuleIdentifier
+Kantaiko.Modularity.Introspection.ModuleIdentifier.ModuleType.get -> System.Type!
+Kantaiko.Modularity.Introspection.ModuleInfo
+Kantaiko.Modularity.Introspection.ModuleInfo.Assembly.get -> System.Reflection.Assembly!
+Kantaiko.Modularity.Introspection.ModuleInfo.Dependencies.get -> System.Collections.Generic.IReadOnlyList<Kantaiko.Modularity.Introspection.ModuleInfo!>!
+Kantaiko.Modularity.Introspection.ModuleInfo.Dependents.get -> System.Collections.Generic.IReadOnlyList<Kantaiko.Modularity.Introspection.ModuleInfo!>!
+Kantaiko.Modularity.Introspection.ModuleInfo.Description.get -> string?
+Kantaiko.Modularity.Introspection.ModuleInfo.DisplayName.get -> string!
+Kantaiko.Modularity.Introspection.ModuleInfo.Flags.get -> Kantaiko.Modularity.Introspection.ModuleFlags
+Kantaiko.Modularity.Introspection.ModuleInfo.Id.get -> Kantaiko.Modularity.Introspection.ModuleIdentifier!
+Kantaiko.Modularity.Introspection.ModuleInfo.Properties.get -> Kantaiko.Properties.IReadOnlyPropertyCollection!
+Kantaiko.Modularity.Introspection.ModuleInfo.Version.get -> System.Version!
+Kantaiko.Modularity.Metadata.ModuleMetadata
+Kantaiko.Modularity.Metadata.ModuleMetadata.Description.get -> string?
+Kantaiko.Modularity.Metadata.ModuleMetadata.Description.init -> void
+Kantaiko.Modularity.Metadata.ModuleMetadata.DisplayName.get -> string!
+Kantaiko.Modularity.Metadata.ModuleMetadata.Flags.get -> Kantaiko.Modularity.Introspection.ModuleFlags
+Kantaiko.Modularity.Metadata.ModuleMetadata.Flags.init -> void
+Kantaiko.Modularity.Metadata.ModuleMetadata.ModuleMetadata(string! displayName, System.Version! version) -> void
+Kantaiko.Modularity.Metadata.ModuleMetadata.Properties.get -> Kantaiko.Properties.IReadOnlyPropertyCollection!
+Kantaiko.Modularity.Metadata.ModuleMetadata.Properties.init -> void
+Kantaiko.Modularity.Metadata.ModuleMetadata.Version.get -> System.Version!
+Kantaiko.Modularity.Metadata.ModuleMetadataExtractor
+Kantaiko.Modularity.Module
+Kantaiko.Modularity.Module.Module() -> void
+Kantaiko.Modularity.ModuleAttribute
+Kantaiko.Modularity.ModuleAttribute.Description.get -> string?
+Kantaiko.Modularity.ModuleAttribute.Description.init -> void
+Kantaiko.Modularity.ModuleAttribute.DisplayName.get -> string?
+Kantaiko.Modularity.ModuleAttribute.DisplayName.init -> void
+Kantaiko.Modularity.ModuleAttribute.Flags.get -> Kantaiko.Modularity.Introspection.ModuleFlags
+Kantaiko.Modularity.ModuleAttribute.Flags.init -> void
+Kantaiko.Modularity.ModuleAttribute.ModuleAttribute() -> void
+Kantaiko.Modularity.ModuleAttribute.Version.get -> string?
+Kantaiko.Modularity.ModuleAttribute.Version.init -> void
+Kantaiko.Modularity.ServiceCollectionExtensions
+static Kantaiko.Modularity.Metadata.ModuleMetadataExtractor.Extract(System.Type! moduleType) -> Kantaiko.Modularity.Metadata.ModuleMetadata!
+static Kantaiko.Modularity.ServiceCollectionExtensions.AddModularity(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Kantaiko.Modularity.ServiceCollectionExtensions.AddModule(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, System.Type! moduleType) -> void
+static Kantaiko.Modularity.ServiceCollectionExtensions.AddModule<TModule>(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.DependencyInjection.IServiceCollection!
+static Kantaiko.Modularity.ServiceCollectionExtensions.GetConfiguration(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.Configuration.IConfiguration!
+static Kantaiko.Modularity.ServiceCollectionExtensions.GetHostingEnvironment(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> Microsoft.Extensions.Hosting.IHostEnvironment!
+static Kantaiko.Modularity.ServiceCollectionExtensions.IsModuleRegistered(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services, System.Type! moduleType) -> bool
+static Kantaiko.Modularity.ServiceCollectionExtensions.IsModuleRegistered<TModule>(this Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> bool
+virtual Kantaiko.Modularity.Module.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection! services) -> void

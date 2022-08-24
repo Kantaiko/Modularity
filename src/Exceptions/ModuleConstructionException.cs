@@ -1,7 +1,13 @@
-﻿namespace Kantaiko.Modularity.Exceptions;
+﻿using System.ComponentModel;
+using Kantaiko.Modularity.Resources;
 
+namespace Kantaiko.Modularity.Exceptions;
+
+/// <summary>
+/// Represents an error occurred while constructing a module.
+/// </summary>
 public class ModuleConstructionException : Exception
 {
-    public ModuleConstructionException(Type moduleType, string message) : base(
-        $"Unable to construct module of type \"{moduleType.Name}\": {message}") { }
+    internal ModuleConstructionException(Type moduleType, [Localizable(true)] string message) :
+        base(string.Format(Strings.UnableToConstructModule, moduleType.FullName, message)) { }
 }

@@ -1,8 +1,12 @@
 ﻿using System.Reflection;
+using Kantaiko.Modularity.Metadata;
 using Kantaiko.Properties;
 
 namespace Kantaiko.Modularity.Introspection;
 
+/// <summary>
+/// Represents the information about the module.
+/// </summary>
 public class ModuleInfo : IReadOnlyPropertyContainer
 {
     private readonly ModuleMetadata _metadata;
@@ -36,27 +40,28 @@ public class ModuleInfo : IReadOnlyPropertyContainer
     public string? Description => _metadata.Description;
 
     /// <summary>
-    /// Version of the module.
+    /// The version of the module.
     /// </summary>
     public Version Version => _metadata.Version;
 
     /// <summary>
-    /// Flags, representing some useful information about the module.
+    /// The module flags, representing some useful information about the module.
     /// </summary>
     public ModuleFlags Flags => _metadata.Flags;
 
     /// <summary>
-    /// Collection of user-defined module properties.
+    /// The collection of user-defined module properties.
     /// </summary>
     public IReadOnlyPropertyCollection Properties => _metadata.Properties;
 
     /// <summary>
-    /// Dependencies, explicitly requested by the module.
+    /// The list of the dependencies, explicitly requested by the module.
     /// </summary>
     public IReadOnlyList<ModuleInfo> Dependencies { get; }
 
     /// <summary>
-    /// All modules that have requested this module to load.
+    /// The list of all modules that have requested this module to load.
+    /// <br/>
     /// Empty, if this module was loaded directly by the host.
     /// </summary>
     public IReadOnlyList<ModuleInfo> Dependents { get; internal set; } = null!;

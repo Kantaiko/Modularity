@@ -3,6 +3,9 @@ using System.Reflection;
 
 namespace Kantaiko.Modularity.Introspection;
 
+/// <summary>
+/// Represents the information about the host containing modules.
+/// </summary>
 public class HostInfo
 {
     internal HostInfo()
@@ -22,17 +25,17 @@ public class HostInfo
     }
 
     /// <summary>
-    /// List of all modules loaded by the host in order of resolution.
+    /// The list of all modules loaded by the host in order of resolution.
     /// </summary>
     public IReadOnlyList<ModuleInfo> Modules { get; }
 
     /// <summary>
-    /// List of modules loaded only explicitly in request order.
+    /// The list of modules loaded only explicitly by the host in order of request.
     /// </summary>
     public IReadOnlyList<ModuleInfo> ExplicitModules { get; }
 
     /// <summary>
-    /// Set of assemblies associated with loaded modules.
+    /// The set of assemblies associated with loaded modules.
     /// </summary>
     public IReadOnlySet<Assembly> Assemblies { get; }
 }

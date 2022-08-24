@@ -1,11 +1,10 @@
 using System.Diagnostics;
-using Kantaiko.Modularity.Internal;
 using Kantaiko.Modularity.Introspection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Hosting;
 
-namespace Kantaiko.Modularity;
+namespace Kantaiko.Modularity.Internal;
 
 internal static class ServiceCollectionHelper
 {
