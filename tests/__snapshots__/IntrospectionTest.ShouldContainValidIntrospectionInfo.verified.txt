@@ -5,27 +5,21 @@
         ModuleType: IntrospectionTest.ModuleC
       },
       DisplayName: CustomTitle,
-      Properties: {
-        Objects: []
-      }
+      Properties: {}
     },
     {
       Id: {
         ModuleType: IntrospectionTest.ModuleB
       },
       DisplayName: ModuleB,
-      Properties: {
-        Objects: []
-      },
+      Properties: {},
       Dependencies: [
         {
           Id: {
             ModuleType: IntrospectionTest.ModuleC
           },
           DisplayName: CustomTitle,
-          Properties: {
-            Objects: []
-          }
+          Properties: {}
         }
       ]
     },
@@ -34,27 +28,21 @@
         ModuleType: IntrospectionTest.ModuleA
       },
       DisplayName: ModuleA,
-      Properties: {
-        Objects: []
-      },
+      Properties: {},
       Dependencies: [
         {
           Id: {
             ModuleType: IntrospectionTest.ModuleB
           },
           DisplayName: ModuleB,
-          Properties: {
-            Objects: []
-          },
+          Properties: {},
           Dependencies: [
             {
               Id: {
                 ModuleType: IntrospectionTest.ModuleC
               },
               DisplayName: CustomTitle,
-              Properties: {
-                Objects: []
-              }
+              Properties: {}
             }
           ]
         }
@@ -67,27 +55,21 @@
         ModuleType: IntrospectionTest.ModuleA
       },
       DisplayName: ModuleA,
-      Properties: {
-        Objects: []
-      },
+      Properties: {},
       Dependencies: [
         {
           Id: {
             ModuleType: IntrospectionTest.ModuleB
           },
           DisplayName: ModuleB,
-          Properties: {
-            Objects: []
-          },
+          Properties: {},
           Dependencies: [
             {
               Id: {
                 ModuleType: IntrospectionTest.ModuleC
               },
               DisplayName: CustomTitle,
-              Properties: {
-                Objects: []
-              }
+              Properties: {}
             }
           ]
         }
